@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/bencedebrodi/RiderProjects/ConsoleApp1/ConsoleApp1.csproj": {}
+    "/Volumes/T7 Touch/Suli/12/csharp/ConsoleApp1/ConsoleApp1.csproj": {}
   },
   "projects": {
-    "/Users/bencedebrodi/RiderProjects/ConsoleApp1/ConsoleApp1.csproj": {
+    "/Volumes/T7 Touch/Suli/12/csharp/ConsoleApp1/ConsoleApp1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/bencedebrodi/RiderProjects/ConsoleApp1/ConsoleApp1.csproj",
+        "projectUniqueName": "/Volumes/T7 Touch/Suli/12/csharp/ConsoleApp1/ConsoleApp1.csproj",
         "projectName": "ConsoleApp1",
-        "projectPath": "/Users/bencedebrodi/RiderProjects/ConsoleApp1/ConsoleApp1.csproj",
+        "projectPath": "/Volumes/T7 Touch/Suli/12/csharp/ConsoleApp1/ConsoleApp1.csproj",
         "packagesPath": "/Users/bencedebrodi/.nuget/packages/",
-        "outputPath": "/Users/bencedebrodi/RiderProjects/ConsoleApp1/obj/",
+        "outputPath": "/Volumes/T7 Touch/Suli/12/csharp/ConsoleApp1/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/bencedebrodi/.nuget/NuGet/NuGet.Config"
@@ -58,7 +58,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/Users/bencedebrodi/.dotnet/sdk/8.0.414/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.414/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

@@ -247,7 +247,7 @@ internal static class Program
             {
                 if (a > 0 && b > 0)
                 {
-                    Console.WriteLine($"A háromszög átfogója: {Math.Sqrt(Math.Pow(a, 2) + Math.Pow(b, 2))}");
+                    Console.WriteLine($"A háromszög átfogója: {Math.Round(Math.Sqrt(Math.Pow(a, 2) + Math.Pow(b, 2)), 2)}");
                 }
                 else
                 {
@@ -264,11 +264,11 @@ internal static class Program
     static void F12()
     {
         Console.Write("Adj meg az \"a\" értékét: ");
-        int a = GetInput.Int();
+        double a = GetInput.Double();
         Console.Write("Adj meg a \"b\" értékét: ");
-        int b = GetInput.Int();
+        double b = GetInput.Double();
         Console.Write("Adj meg a \"c\" értékét: ");
-        int c = GetInput.Int();
+        double c = GetInput.Double();
         Console.WriteLine($"A téglatest felszíne: {2 * (a * b + b * c + a * c)}");
         Console.WriteLine($"A téglatest térfogata: {a * b * c}");
     }
@@ -306,6 +306,308 @@ internal static class Program
             Console.WriteLine("Érvénytelen bemenet");
         }
     }
+
+    static void F15()
+    {
+        Console.Write("Add meg a számot: ");
+        int n = GetInput.Int();
+        if (n > 0)
+        {
+            for (int i = 1; i <= n; i++)
+            {
+                Console.Write(i);
+                if (i < n)
+                {
+                    Console.Write(" ");
+                }
+            }
+            Console.WriteLine();
+        }
+        else
+        {
+            Console.WriteLine("Érvénytelen bemenet");
+        }
+    }
+
+    static void F16()
+    {
+        Console.Write("Adj meg egy pozitív egész számot: ");
+        int n = GetInput.Int();
+        if (n > 0)
+        {
+            for (int i = 1; i <= n; i++)
+            {
+                Console.WriteLine(i);
+            }
+        }
+        else
+        {
+            Console.WriteLine("Érvénytelen bemenet");
+        }
+    }
+
+    static void F17()
+    {
+        Console.Write("Adj meg egy pozitív egész számot: ");
+        int n = GetInput.Int();
+        if (n > 0)
+        {
+            Console.WriteLine($"{n} osztói:");
+            for (int i = 1; i <= n; i++)
+            {
+                if (n % i == 0)
+                {
+                    Console.WriteLine(i);
+                }
+            }
+        }
+        else
+        {
+            Console.WriteLine("Érvénytelen bemenet");
+        }
+    }
+
+    static void F18()
+    {
+        Console.Write("Adj meg egy pozitív egész számot: ");
+        int n = GetInput.Int();
+        if (n > 0)
+        {
+            int sum = 0;
+            for (int i = 1; i <= n; i++)
+            {
+                if (n % i == 0)
+                {
+                    sum += i;
+                }
+            }
+            Console.WriteLine($"{n} osztóinak összege: {sum}");
+        }
+        else
+        {
+            Console.WriteLine("Érvénytelen bemenet");
+        }
+    }
+
+    static void F19()
+    {
+        Console.Write("Adj meg egy pozitív egész számot: ");
+        int n = GetInput.Int();
+        if (n > 0)
+        {
+            int sum = 0;
+            for (int i = 1; i <= n; i++)
+            {
+                if (n % i == 0)
+                {
+                    sum += i;
+                }
+            }
+            
+            if (sum == 2 * n)
+            {
+                Console.WriteLine($"{n} tökéletes szám.");
+            }
+            else
+            {
+                Console.WriteLine($"{n} nem tökéletes szám.");
+            }
+        }
+        else
+        {
+            Console.WriteLine("Érvénytelen bemenet");
+        }
+    }
+
+    static void F20()
+    {
+        Console.Write("Hatványalap: ");
+        double a = GetInput.Double();
+        Console.Write("Kitevő: ");
+        int n = GetInput.Int();
+        double result = Math.Pow(a, n);
+        Console.WriteLine($"{a} {n} -dik hatványa: {result}");
+    }
+
+    static void F21()
+    {
+        double num;
+        do
+        {
+            Console.Write("Adj meg egy pozitív számot: ");
+            num = GetInput.Double();
+            if (num <= 0)
+            {
+                Console.WriteLine("Hibás bemenet, próbáld újra.");
+            }
+        } while (num <= 0);
+    }
+
+    static void F22()
+    {
+        int sum = 0;
+        int count = 0;
+        while (true)
+        {
+            Console.Write("Adj meg egy számot (10-nél kisebbet): ");
+            int n = GetInput.Int();
+            if (n < 10)
+            {
+                sum += n;
+                count++;
+            }
+            else
+            {
+                break;
+            }
+        }
+        Console.WriteLine($"A beolvasott számok összege: {sum}");
+    }
+
+    static void F23()
+    {
+        Console.Write("Kérek egy egész számot: ");
+        int number = GetInput.Int();
+        int original = number;
+        int twoPowerCount = 0;
+
+        while (number % 2 == 0)
+        {
+            number /= 2;
+            twoPowerCount++;
+        }
+
+        Console.Write($"{original} = ");
+        if (twoPowerCount == 0)
+        {
+            Console.WriteLine(original);
+        }
+        else
+        {
+            for (int i = 0; i < twoPowerCount; i++)
+            {
+                Console.Write("2*");
+            }
+            Console.WriteLine(number);
+        }
+    }
+
+    static void F24()
+    {
+        string input;
+        do
+        {
+            Console.Write("Kérlek írd be az 'alma' szót: ");
+            input = Console.ReadLine()?.Trim() ?? "";
+            
+            if (input != "alma")
+            {
+                Console.WriteLine("Hibás bemenet! Csak az 'alma' szót fogadom el.");
+            }
+        } while (input != "alma");
+
+        Console.WriteLine("Az alma gyümölcs!");
+    }
+
+    static void F25()
+    {
+        Console.Write("Kérek egy egész számot: ");
+        int number = GetInput.Int();
+        int original = number;
+        int quotient = 0;
+
+        while (number >= 3)
+        {
+            number -= 3;
+            quotient++;
+        }
+
+        Console.WriteLine($"{original} = {quotient}*3+{number}");
+    }
+
+    static void F26()
+    {
+        Console.Write("Adj meg egy pozitív egész számot: ");
+        int num = GetInput.Int();
+
+        if (num <= 1)
+        {
+            Console.WriteLine("A szám nem prímszám.");
+            return;
+        }
+
+        bool isPrime = true;
+        for (int i = 2; i <= Math.Sqrt(num); i++)
+        {
+            if (num % i == 0)
+            {
+                isPrime = false;
+                break;
+            }
+        }
+
+        if (isPrime)
+            Console.WriteLine($"A(z) {num} prímszám.");
+        else
+            Console.WriteLine($"A(z) {num} nem prímszám.");
+    }
+
+    static void F27()
+    {
+        Console.Write("Adj meg egy pozitív egész számot: ");
+        int limit = GetInput.Int();
+
+        if (limit < 2)
+        {
+            Console.WriteLine("Nincs prímszám ebben a tartományban.");
+            return;
+        }
+
+        Console.WriteLine($"Prímszámok 2-től {limit}-ig:");
+
+        for (int num = 2; num <= limit; num++)
+        {
+            bool isPrime = true;
+            for (int i = 2; i <= Math.Sqrt(num); i++)
+            {
+                if (num % i == 0)
+                {
+                    isPrime = false;
+                    break;
+                }
+            }
+
+            if (isPrime)
+            {
+                Console.Write(num + " ");
+            }
+        }
+        Console.WriteLine();
+    }
+    static void F28()
+    {
+        Console.Write("Adj meg egy pozitív egész számot: ");
+        int num = GetInput.Int();
+
+        if (num <= 1)
+        {
+            Console.WriteLine("A számnak nincsenek prímosztói.");
+            return;
+        }
+
+        Console.WriteLine($"A(z) {num} prímosztói:");
+        int n = num;
+
+        for (int i = 2; i <= n; i++)
+        {
+            while (n % i == 0)
+            {
+                Console.WriteLine(i);
+                n /= i;
+            }
+        }
+    }
+
 
     static void Main(string[] args)
     {
