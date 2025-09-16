@@ -260,9 +260,55 @@ internal static class Program
             }
         } while (a < 0 && b < 0);
     }
-    
+
+    static void F12()
+    {
+        Console.Write("Adj meg az \"a\" értékét: ");
+        int a = GetInput.Int();
+        Console.Write("Adj meg a \"b\" értékét: ");
+        int b = GetInput.Int();
+        Console.Write("Adj meg a \"c\" értékét: ");
+        int c = GetInput.Int();
+        Console.WriteLine($"A téglatest felszíne: {2 * (a * b + b * c + a * c)}");
+        Console.WriteLine($"A téglatest térfogata: {a * b * c}");
+    }
+
+    static void F13()
+    {
+        Console.Write("Add meg a kör átmérőjét: ");
+        double d = GetInput.Double();
+        if (d > 0)
+        {
+            Console.WriteLine($"A kör kerülete: {Math.PI * d}");
+            Console.WriteLine($"A kör területe: {Math.PI * Math.Pow(d / 2, 2)}");
+        }
+        else
+        {
+            Console.WriteLine("Érvénytelen átmérő");
+        }
+    }
+
+    static void F14()
+    {
+        Console.Write("Add meg a körív sugarát: ");
+        double r = GetInput.Double();
+        Console.Write("Add meg a középponti szöget fokban: ");
+        double alpha = GetInput.Double();
+        if (r > 0 && alpha > 0 && alpha <= 360)
+        {
+            double length = 2 * Math.PI * r * (alpha / 360);
+            double area = Math.PI * r * r * (alpha / 360);
+            Console.WriteLine($"A körív hossza: {length}");
+            Console.WriteLine($"A körív területe: {area}");
+        }
+        else
+        {
+            Console.WriteLine("Érvénytelen bemenet");
+        }
+    }
+
     static void Main(string[] args)
     {
-        
+
     }
 }
