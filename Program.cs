@@ -608,6 +608,76 @@ internal static class Program
         }
     }
 
+    static void F29()
+    {
+        Console.Write("Adj meg egy pozitív egész számot: ");
+        int num = GetInput.Int();
+
+        if (num <= 1)
+        {
+            Console.WriteLine("A számnak nincsenek prímosztói.");
+            return;
+        }
+
+        Console.WriteLine($"{num} prímosztói:");
+        int n = num;
+
+        for (int i = 2; i <= n; i++)
+        {
+            while (n % i == 0)
+            {
+                Console.WriteLine(i);
+                n /= i;
+            }
+        }
+    }
+
+    static void F30()
+    {
+        Console.Write("Add meg az első számot: ");
+        int a = GetInput.Int();
+        Console.Write("Add meg a második számot: ");
+        int b = GetInput.Int();
+
+        a = Math.Abs(a);
+        b = Math.Abs(b);
+        while (b > 0)
+        {
+            int t = b;
+            b = a % b;
+            a = t;
+        }
+        
+        Console.WriteLine($"{a} és {b} legnagyobb közös osztója: {a}");
+    }
+
+    static void F31()
+    {
+        Console.Write("Add meg az első számot: ");
+        int a = GetInput.Int();
+        Console.Write("Add meg a második számot: ");
+        int b = GetInput.Int();
+
+        int num1 = Math.Abs(a);
+        int num2 = Math.Abs(b);
+
+        int num1Copy = num1;
+        int num2Copy = num2;
+        
+        while (num2Copy > 0)
+        {
+            int temp = num2Copy;
+            num2Copy = num1Copy % num2Copy;
+            num1Copy = temp;
+        }
+        
+        int gcd = num1Copy;
+
+        int lcm = (num1 * num2) / gcd;
+        
+        Console.WriteLine($"{a} és {b} legkisebb közös többszöröse: {lcm}");
+    }
+
 
     static void Main(string[] args)
     {
