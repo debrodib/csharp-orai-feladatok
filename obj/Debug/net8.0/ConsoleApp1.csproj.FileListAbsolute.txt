@@ -12,3 +12,18 @@
 /Users/bencedebrodi/RiderProjects/ConsoleApp1/obj/Debug/net8.0/ConsoleApp1.pdb
 /Users/bencedebrodi/RiderProjects/ConsoleApp1/obj/Debug/net8.0/ConsoleApp1.genruntimeconfig.cache
 /Users/bencedebrodi/RiderProjects/ConsoleApp1/obj/Debug/net8.0/ref/ConsoleApp1.dll
+/Volumes/T7 Touch/Suli/12/csharp/ConsoleApp1/obj/Debug/net8.0/ConsoleApp1.GeneratedMSBuildEditorConfig.editorconfig
+/Volumes/T7 Touch/Suli/12/csharp/ConsoleApp1/obj/Debug/net8.0/ConsoleApp1.AssemblyInfoInputs.cache
+/Volumes/T7 Touch/Suli/12/csharp/ConsoleApp1/obj/Debug/net8.0/ConsoleApp1.AssemblyInfo.cs
+/Volumes/T7 Touch/Suli/12/csharp/ConsoleApp1/obj/Debug/net8.0/ConsoleApp1.csproj.CoreCompileInputs.cache
+/Volumes/T7 Touch/Suli/12/csharp/ConsoleApp1/obj/Debug/net8.0/ConsoleApp1.sourcelink.json
+/Volumes/T7 Touch/Suli/12/csharp/ConsoleApp1/obj/Debug/net8.0/ConsoleApp1.dll
+/Volumes/T7 Touch/Suli/12/csharp/ConsoleApp1/obj/Debug/net8.0/refint/ConsoleApp1.dll
+/Volumes/T7 Touch/Suli/12/csharp/ConsoleApp1/obj/Debug/net8.0/ConsoleApp1.pdb
+/Volumes/T7 Touch/Suli/12/csharp/ConsoleApp1/bin/Debug/net8.0/ConsoleApp1
+/Volumes/T7 Touch/Suli/12/csharp/ConsoleApp1/bin/Debug/net8.0/ConsoleApp1.deps.json
+/Volumes/T7 Touch/Suli/12/csharp/ConsoleApp1/bin/Debug/net8.0/ConsoleApp1.runtimeconfig.json
+/Volumes/T7 Touch/Suli/12/csharp/ConsoleApp1/bin/Debug/net8.0/ConsoleApp1.dll
+/Volumes/T7 Touch/Suli/12/csharp/ConsoleApp1/bin/Debug/net8.0/ConsoleApp1.pdb
+/Volumes/T7 Touch/Suli/12/csharp/ConsoleApp1/obj/Debug/net8.0/ConsoleApp1.genruntimeconfig.cache
+/Volumes/T7 Touch/Suli/12/csharp/ConsoleApp1/obj/Debug/net8.0/ref/ConsoleApp1.dll

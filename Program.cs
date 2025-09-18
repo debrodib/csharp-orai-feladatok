@@ -639,16 +639,19 @@ internal static class Program
         Console.Write("Add meg a második számot: ");
         int b = GetInput.Int();
 
-        a = Math.Abs(a);
-        b = Math.Abs(b);
-        while (b > 0)
+        int gcd = LNKO(Math.Abs(a), Math.Abs(b));
+        Console.WriteLine($"{a} és {b} legnagyobb közös osztója: {gcd}");
+
+        static int LNKO(int a, int b)
         {
+            while (b > 0)
+            {
             int t = b;
             b = a % b;
             a = t;
+            }
+            return a;
         }
-        
-        Console.WriteLine($"{a} és {b} legnagyobb közös osztója: {a}");
     }
 
     static void F31()
@@ -681,6 +684,5 @@ internal static class Program
 
     static void Main(string[] args)
     {
-
     }
 }
