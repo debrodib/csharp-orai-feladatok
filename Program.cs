@@ -681,8 +681,271 @@ internal static class Program
         Console.WriteLine($"{a} és {b} legkisebb közös többszöröse: {lcm}");
     }
 
+    static void F32()
+    {
+        Console.Write("Adj meg egy pozitív egész számot: ");
+        int n = GetInput.Int();
+
+        if (n <= 0)
+        {
+            Console.WriteLine("Érvénytelen bemenet. A számnak pozitívnak kell lennie.");
+            return;
+        }
+
+        Console.WriteLine($"{n} alapú szorzótábla:");
+
+        for (int i = 1; i <= 10; i++)
+        {
+            Console.WriteLine($"{i} × {n} = {i * n}");
+        }
+    }
+
+    static void F33()
+    {
+        Console.Write("Adj meg egy pozitív egész számot: ");
+        int n = GetInput.Int();
+
+        if (n <= 0)
+        {
+            Console.WriteLine("Érvénytelen bemenet. A számnak pozitívnak kell lennie.");
+            return;
+        }
+
+        Console.WriteLine($"{n} alapú összegtábla:");
+
+        for (int i = 1; i <= 10; i++)
+        {
+            for (int j = 1; j <= 10; j++)
+            {
+                Console.Write($"{i + j * n}\t");
+            }
+            Console.WriteLine();
+        }
+    }
+
+    static void F34()
+    {
+        Console.WriteLine("Párosával speciális kétjegyű számok keresése:");
+        
+        for (int a = 10; a <= 99; a++)
+        {
+            for (int b = a; b <= 99; b++)
+            {
+                int a1 = a / 10;
+                int a2 = a % 10;
+                
+                int b1 = b / 10;
+                int b2 = b % 10;
+                
+                int reverseA = a2 * 10 + a1;
+                int reverseB = b2 * 10 + b1;
+                
+                if (a * b == reverseA * reverseB && a != reverseA && a != reverseB && b != reverseA)
+                {
+                    Console.WriteLine($"Találat: {a} és {b} - mivel {a} * {b} = {a * b} = {reverseA} * {reverseB}");
+                }
+            }
+        }
+    }
+
+    static void F35()
+    {
+        int rows = 10;
+        int columns = (26 + rows - 1) / rows;
+        
+        for (int row = 0; row < rows; row++)
+        {
+            for (int col = 0; col < columns; col++)
+            {
+                int index = col * rows + row;
+                if (index < 26)
+                {
+                    char letter = (char)('a' + index);
+                    int asciiCode = (int)letter;
+                    Console.Write($"{letter} {asciiCode}\t");
+                }
+            }
+            Console.WriteLine();
+        }
+    }
+
+    static void F36()
+    {
+        Console.Write("Add meg a sorok számát: ");
+        int rows = GetInput.Int();
+        Console.Write("Add meg az oszlopok számát: ");
+        int cols = GetInput.Int();
+        
+        if (rows <= 0 || cols <= 0)
+        {
+            Console.WriteLine("Érvénytelen bemenet. Pozitív számokat adj meg.");
+            return;
+        }
+        
+        for (int row = 0; row < rows; row++)
+        {
+            char startChar = row % 2 == 0 ? 'O' : 'X';
+            
+            for (int col = 0; col < cols; col++)
+            {
+            if (col % 2 == 0)
+            {
+                Console.Write(startChar);
+            }
+            else
+            {
+                Console.Write(startChar == 'O' ? 'X' : 'O');
+            }
+            }
+            Console.WriteLine();
+        }
+    }
+
+    static void F37()
+    {
+        Console.Write("Adj meg egy természetes számot: ");
+        int a = GetInput.Int();
+
+        if (a <= 0)
+        {
+            Console.WriteLine("Érvénytelen bemenet. A számnak pozitívnak kell lennie.");
+            return;
+        }
+
+        for (int i = 1; i <= a; i++)
+        {
+            for (int j = 1; j <= i; j++)
+            {
+                Console.Write("*");
+            }
+            Console.WriteLine();
+        }
+    }
+
+    static void F38()
+    {
+        Console.Write("Adj meg egy természetes számot: ");
+        int a = GetInput.Int();
+
+        if (a <= 0)
+        {
+            Console.WriteLine("Érvénytelen bemenet. A számnak pozitívnak kell lennie.");
+            return;
+        }
+
+        for (int i = 1; i <= a; i++)
+        {
+            int spaces = a - i;
+            int stars  = 2 * i - 1;
+
+            Console.Write(new string(' ', spaces));
+            Console.WriteLine(new string('*', stars));
+        }
+    }
+
+    static void F39()
+    {
+        Console.Write("Adj meg a téglalap magasságát (M): ");
+        int m = GetInput.Int();
+        Console.Write("Adj meg a téglalap szélességét (N): ");
+        int n = GetInput.Int();
+
+        if (m <= 0 || n <= 0)
+        {
+            Console.WriteLine("Érvénytelen bemenet. A számoknak pozitívnak kell lenniük.");
+            return;
+        }
+
+        for (int i = 0; i < n; i++)
+        {
+            Console.Write("*");
+        }
+        Console.WriteLine();
+
+        for (int i = 0; i < m - 2; i++)
+        {
+            Console.Write("*");
+            for (int j = 0; j < n - 2; j++)
+            {
+                Console.Write(" ");
+            }
+            if (n > 1)
+            {
+                Console.Write("*");
+            }
+            Console.WriteLine();
+        }
+
+        if (m > 1)
+        {
+            for (int i = 0; i < n; i++)
+            {
+                Console.Write("*");
+            }
+            Console.WriteLine();
+        }
+    }
+
+    static void F40()
+    {
+        Console.Write("Adj meg egy pozitív egész számot: ");
+        int limit = GetInput.Int();
+        
+        if (limit <= 0)
+        {
+            Console.WriteLine("Érvénytelen bemenet. A számnak pozitívnak kell lennie.");
+            return;
+        }
+        
+        Console.WriteLine($"Tökéletes számok 1-től {limit}-ig:");
+        bool found = false;
+        
+        for (int num = 1; num <= limit; num++)
+        {
+            int sum = 0;
+            for (int i = 1; i < num; i++)
+            {
+                if (num % i == 0)
+                {
+                    sum += i;
+                }
+            }
+            
+            if (sum == num)
+            {
+                Console.WriteLine(num);
+                found = true;
+            }
+        }
+        
+        if (!found)
+        {
+            Console.WriteLine("Nincs tökéletes szám ebben a tartományban.");
+        }
+    }
+
+    static void F41()
+    {
+        Console.WriteLine("Vigenère-tábla:");
+
+        for (int i = 0; i < 26; i++)
+        {
+            for (int j = 0; j < 26; j++)
+            {
+                char c = (char)('A' + (i + j) % 26);
+                Console.Write(c);
+            }
+            Console.WriteLine();
+        }
+    }
+
+    static void F42()
+    {
+        
+    }
 
     static void Main(string[] args)
     {
+        F41();
     }
 }
